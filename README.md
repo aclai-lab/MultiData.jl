@@ -14,14 +14,16 @@
 
 *MultiData* provides a **machine learning oriented** data layer on top of DataFrames.jl for:
 - Instantiating and manipulating [*multimodal*](https://en.wikipedia.org/wiki/Multimodal_learning) datasets for (un)supervised machine learning;
-- Dealing with [*(un)structured* data](https://en.wikipedia.org/wiki/Unstructured_data) (e.g., graphs, images, time-series, etc.);
+- Dealing with [*(non-)tabular* data](https://en.wikipedia.org/wiki/Unstructured_data) (e.g., graphs, images, time-series, etc.);
 - Describing datasets via basic statistical measures;
 - Saving to/loading from *npy/npz* format, as well as a custom CSV-based format (with interesting features such as *lazy loading* of datasets);
 - Performing basic data processing operations (e.g., windowing, moving average, etc.).
 
+<!--
 If you are used to dealing with unstructured/multimodal data, but cannot find the right
 tools in Julia, you will find
 [*SoleFeatures.jl*](https://github.com/aclai-lab/SoleFeatures.jl/) useful!
+-->
 
 ## About
 
