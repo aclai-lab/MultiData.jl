@@ -190,4 +190,6 @@ export get_instance, maxchannelsize
 
 include("dimensional-data.jl")
 
+include("deprecate.jl")
+
 end # module
