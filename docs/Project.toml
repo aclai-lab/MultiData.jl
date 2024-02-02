@@ -1,0 +1,6 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+MultiData = "8cc5100c-b3d1-4f82-90cb-0ea93d317aba"
+
+[compat]
+Documenter = "1"
