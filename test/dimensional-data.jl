@@ -21,20 +21,20 @@ end
 
 begin
     local df = MultiData.dimensional2dataframe(eachslice(rand(3,4); dims=2), ["a", "b", "c"])
-    @test first(unique(size.(MultiData.dataframe2dimensional(df)[1]))) == (3,)
+    @test first(unique(size.(dataframe2dimensional(df)[1]))) == (3,)
 end
 
 begin
     local df = MultiData.dimensional2dataframe(eachslice(rand(1,3,4); dims=3), ["a", "b", "c"])
-    @test first(unique(size.(MultiData.dataframe2dimensional(df)[1]))) == (1,3)
+    @test first(unique(size.(dataframe2dimensional(df)[1]))) == (1,3)
 end
 
 begin
     local df = MultiData.dimensional2dataframe(eachslice(rand(2,3,4); dims=3), ["a", "b", "c"])
-    @test first(unique(size.(MultiData.dataframe2dimensional(df)[1]))) == (2,3)
+    @test first(unique(size.(dataframe2dimensional(df)[1]))) == (2,3)
 end
 
 begin
     local df = MultiData.dimensional2dataframe(eachslice(rand(2,2,3,4); dims=4), ["a", "b", "c"])
-    @test first(unique(size.(MultiData.dataframe2dimensional(df)[1]))) == (2,2,3)
+    @test first(unique(size.(dataframe2dimensional(df)[1]))) == (2,2,3)
 end

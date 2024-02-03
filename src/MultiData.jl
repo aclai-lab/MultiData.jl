@@ -87,7 +87,7 @@ A concrete multimodal dataset should always provide accessors
 abstract type AbstractMultiDataset <: AbstractDataset end
 
 """
-Abstract supertype for all labelled multimodal datasets (used in supervised learning).
+Abstract supertype for all labeled multimodal datasets (used in supervised learning).
 
 As any multimodal dataset, any concrete labeled multimodal dataset should always provide
 the accessors [`data`](@ref), to access the underlying tabular structure (e.g., `DataFrame`) and
@@ -186,7 +186,10 @@ include("filesystem.jl")
 
 include("dimensionality.jl")
 
+export dataframe2dimensional, dimensional2dataframe
+export cube2dataframe, dataframe2cube
 export get_instance, maxchannelsize
+export hasnans, displaystructure
 
 include("dimensional-data.jl")
 
