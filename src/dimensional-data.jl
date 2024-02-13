@@ -225,3 +225,6 @@ function dataframe2cube(
 
     return cube, names(df)
 end
+
+cube2dimensional(X::AbstractArray) = dataframe2dimensional(cube2dataframe(X))
+dimensional2cube(X) = dataframe2cube(dimensional2dataframe(X))
