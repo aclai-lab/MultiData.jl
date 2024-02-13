@@ -132,8 +132,8 @@ function _check_dataframe(df::AbstractDataFrame)
     end
 end
 
-
-function dimensional2dataframe(X::AbstractDimensionalDataset, colnames = nothing) # colnames = :auto
+# function dimensional2dataframe(X::AbstractDimensionalDataset, colnames = nothing) # colnames = :auto
+function dimensional2dataframe(X, colnames = nothing) # colnames = :auto
     MultiData.checknvariables(X)
     varslices = [begin
         map(instance->MultiData.instance_channel(instance, i_variable), eachinstance(X))
