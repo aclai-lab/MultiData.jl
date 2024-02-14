@@ -460,7 +460,7 @@ version = "2022.10.11"
 
 [[deps.MultiData]]
 deps = ["CSV", "Catch22", "DataFrames", "DataStructures", "Logging", "MLJModelInterface", "Random", "Reexport", "Revise", "ScientificTypes", "SoleBase", "Statistics", "StatsBase", "Tables"]
-path = ".."
+git-tree-sha1 = "f2795b9938525bc82f0f74e4c8504080c9ce935f"
 uuid = "8cc5100c-b3d1-4f82-90cb-0ea93d317aba"
 version = "0.1.0"
 
@@ -641,7 +641,7 @@ uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
 
 [[deps.SoleBase]]
 deps = ["CategoricalArrays", "FillArrays", "IterTools", "Logging", "Random", "StatsBase"]
-path = "../../SoleBase"
+git-tree-sha1 = "1acbf3c233d2d494a8fd03dcb1fff5621bc5074f"
 uuid = "4475fa32-7023-44a0-aa70-4813b230e492"
 version = "0.12.0"
 
