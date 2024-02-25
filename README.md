@@ -5,7 +5,7 @@
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://aclai-lab.github.io/MultiData.jl)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://aclai-lab.github.io/MultiData.jl/dev)
 [![Build Status](https://api.cirrus-ci.com/github/aclai-lab/MultiData.jl.svg?branch=main)](https://cirrus-ci.com/github/aclai-lab/MultiData.jl)
-[![Coverage](https://codecov.io/gh/aclai-lab/MultiData.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/aclai-lab/MultiData.jl)
+[![Coverage](https://codecov.io/gh/aclai-lab/MultiData.jl/branch/main/graph/badge.svg?token=LT9IYIYNFI)](https://codecov.io/gh/aclai-lab/MultiData.jl)
 <!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aclai-lab/MultiData.jl/HEAD?labpath=pluto-demo.jl) -->
 
 <!-- [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://aclai-lab.github.io/MultiData.jl/dev) -->
