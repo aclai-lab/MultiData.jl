@@ -148,7 +148,7 @@ function dataframe2dimensional(
     df::AbstractDataFrame;
     dry_run::Bool = false,
 )
-    MultiData,_check_dataframe(df)
+    MultiData._check_dataframe(df)
 
     coltypes = eltype.(eachcol(df))
     common_eltype = Union{eltype.(coltypes)...}
