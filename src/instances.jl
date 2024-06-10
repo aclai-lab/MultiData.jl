@@ -177,5 +177,5 @@ end
 
 function eachinstance(md::AbstractMultiDataset)
     df = data(md)
-    Iterators.map(i->(@view df[i,:]), 1:ninstances(md))
+    Iterators.map(i->(@view md[i,:]), 1:ninstances(md))
 end
