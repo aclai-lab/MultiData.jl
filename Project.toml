@@ -1,7 +1,7 @@
 name = "MultiData"
 uuid = "8cc5100c-b3d1-4f82-90cb-0ea93d317aba"
 authors = ["Lorenzo Balboni", "Federico Manzella", "Giovanni Pagliarini", "Eduard I. Stan"]
-version = "0.0.1"
+version = "0.1.1"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
