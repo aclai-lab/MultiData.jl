@@ -255,12 +255,22 @@ end
 
 function SoleBase.instances(
     md::MultiDataset,
-    inds::AbstractVector{<:Integer},
+    inds::AbstractVector,
     return_view::Union{Val{true},Val{false}} = Val(false),
 )
     @assert return_view == Val(false)
+    @assert all(i->i<=ninstances(md), inds) "Cannot slice MultiDataset of $(ninstances(md)) instances with indices $(inds)."
     MultiDataset(data(md)[inds,:], grouped_variables(md))
 end
+
+import Base: view
+Base.@propagate_inbounds function view(md::MultiDataset, inds...)
+    MultiDataset(view(data(md), inds...), grouped_variables(md))
+end
+Base.@propagate_inbounds function view(md::MultiDataset, inds::Integer, ::Colon)
+    MultiDataset(view(data(md), [inds], :), grouped_variables(md))
+end
+
 
 function vcat(mds::MultiDataset...)
     MultiDataset(vcat((data.(mds)...)), grouped_variables(first(mds)))

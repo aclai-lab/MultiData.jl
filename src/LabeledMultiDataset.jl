@@ -138,7 +138,7 @@ end
 
 function SoleBase.instances(
     lmd::LabeledMultiDataset,
-    inds::AbstractVector{<:Integer},
+    inds::AbstractVector,
     return_view::Union{Val{true},Val{false}} = Val(false)
 )
     LabeledMultiDataset(

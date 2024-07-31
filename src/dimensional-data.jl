@@ -47,7 +47,7 @@ function checknvariables(d::AbstractDimensionalDataset{T,D}) where {T<:Number,D}
 end
 nvariables(d::AbstractDimensionalDataset{T,D}) where {T<:Number,D} = size(first(eachinstance(d)), D)
 
-function instances(d::AbstractDimensionalDataset, inds::AbstractVector{<:Integer}, return_view::Union{Val{true},Val{false}} = Val(false))
+function instances(d::AbstractDimensionalDataset, inds::AbstractVector, return_view::Union{Val{true},Val{false}} = Val(false))
     if return_view == Val(true) @views d[inds] else d[inds]    end
 end
 
