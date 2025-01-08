@@ -3,6 +3,7 @@
 
 using StatsBase
 import Base: eltype
+import SoleBase: displaystructure
 import SoleBase: dimensionality, channelsize
 
 _isnan(n::Number) = isnan(n)
@@ -76,6 +77,14 @@ instance(d::AbstractDimensionalDataset, idx::Integer) = @views d[idx]
 get_instance(args...) = instance(args...)
 
 channelsize(d::AbstractDimensionalDataset, i_instance::Integer) = instance_channelsize(d[i_instance])
+
+"""
+    maxchannelsize(dataset).
+
+Return the maximum channel size across instances of dimensional dataset.
+
+See also [`AbstractDimensionalDataset`](@ref).
+"""
 maxchannelsize(d::AbstractDimensionalDataset) = maximum(i_instance->channelsize(d, i_instance), 1:ninstances(d))
 
 instance_channel(instance::AbstractArray{T,1}, i_var::Integer) where T = @views instance[      i_var]::T                       # N=0

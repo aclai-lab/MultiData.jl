@@ -4,7 +4,7 @@ import SoleBase: dimensionality
 # AbstractMultiDataset - infos
 
 """
-    dimensionality(df)
+    dimensionality(df::AbstractDataFrame)
 
 Return the dimensionality of a dataframe `df`.
 

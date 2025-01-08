@@ -24,7 +24,7 @@ end
 """
     eachmodality(md)
 
-Return a (lazy) iterator of the modalities of a multimodal dataset.
+Return a (lazy) iterator to the modalities of a multimodal dataset.
 """
 function eachmodality(md::AbstractMultiDataset)
     df = data(md)
