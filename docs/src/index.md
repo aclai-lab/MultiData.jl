@@ -28,7 +28,7 @@ To install the developement version, run:
 
 ```julia
 import Pkg
-Pkg.add("https://github.com/aclai-lab/MultiData.jl#dev")
+Pkg.add("https://github.com/aclai-lab/MultiData.jl#main")
 ```
 
 
