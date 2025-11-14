@@ -1,6 +1,3 @@
-
-__precompile__()
-
 module MultiData
 
 using DataFrames
@@ -15,8 +12,6 @@ using Reexport
 using SoleBase
 using SoleBase: AbstractDataset, slicedataset
 
-@reexport using DataFrames
-
 import Base: eltype, isempty, iterate, map, getindex, length
 import Base: firstindex, lastindex, ndims, size, show, summary
 import Base: vcat
@@ -24,6 +19,7 @@ import Base: isequal, isapprox
 import Base: ==, ≈
 import Base: in, issubset, setdiff, setdiff!, union, union!, intersect, intersect!
 import Base: ∈, ⊆, ∪, ∩
+
 import DataFrames: describe
 import ScientificTypes: show
 
@@ -197,4 +193,4 @@ include("dimensional-data.jl")
 
 include("deprecate.jl")
 
-end # module
+end

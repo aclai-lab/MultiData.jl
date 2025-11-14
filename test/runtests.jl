@@ -1,6 +1,8 @@
-using MultiData
 using Test
+using MultiData
+
 using CSV
+using DataFrames
 
 const testing_savedataset = mktempdir(prefix = "saved_dataset")
 
