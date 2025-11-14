@@ -3,6 +3,7 @@ using MultiData
 
 using CSV
 using DataFrames
+using SoleBase
 
 const testing_savedataset = mktempdir(prefix = "saved_dataset")
 

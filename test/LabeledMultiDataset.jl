@@ -21,14 +21,14 @@ lmd = LabeledMultiDataset(
 
 @test ninstances(lmd) == length(eachinstance(lmd)) == 2
 
-@test_throws ErrorException slicedataset(lmd, [])
-@test_nowarn slicedataset(lmd, :)
-@test_nowarn slicedataset(lmd, 1)
-@test_nowarn slicedataset(lmd, [1])
+@test_throws ErrorException SoleBase.slicedataset(lmd, [])
+@test_nowarn SoleBase.slicedataset(lmd, :)
+@test_nowarn SoleBase.slicedataset(lmd, 1)
+@test_nowarn SoleBase.slicedataset(lmd, [1])
 
-@test ninstances(slicedataset(lmd, :)) == 2
-@test ninstances(slicedataset(lmd, 1)) == 1
-@test ninstances(slicedataset(lmd, [1])) == 1
+@test ninstances(SoleBase.slicedataset(lmd, :)) == 2
+@test ninstances(SoleBase.slicedataset(lmd, 1)) == 1
+@test ninstances(SoleBase.slicedataset(lmd, [1])) == 1
 
 @test_nowarn concatdatasets(lmd, lmd, lmd)
 @test_nowarn vcat(lmd, lmd, lmd)

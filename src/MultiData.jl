@@ -10,7 +10,8 @@ using CSV
 using Random
 using Reexport
 using SoleBase
-using SoleBase: AbstractDataset, slicedataset
+
+@reexport using SoleBase: AbstractDataset, slicedataset
 
 import Base: eltype, isempty, iterate, map, getindex, length
 import Base: firstindex, lastindex, ndims, size, show, summary
@@ -30,13 +31,13 @@ import SoleBase: eachinstance
 # exports
 
 # export types
-export AbstractDataset, AbstractMultiDataset
+export AbstractMultiDataset
 export MultiDataset
 export AbstractLabeledMultiDataset
 export LabeledMultiDataset
 
 # information gathering
-export instance, ninstances, slicedataset, concatdatasets
+export instance, ninstances, concatdatasets
 export modality, nmodalities
 export variables, nvariables, dimensionality, sparevariables, hasvariables
 export variableindex
@@ -82,7 +83,7 @@ A concrete multimodal dataset should always provide accessors
 [`grouped_variables`](@ref), to access the grouping of variables
 (a vector of vectors of column indices).
 """
-abstract type AbstractMultiDataset <: AbstractDataset end
+abstract type AbstractMultiDataset <: SoleBase.AbstractDataset end
 
 """
 Abstract supertype for all labeled multimodal datasets (used in supervised learning).

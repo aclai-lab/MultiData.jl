@@ -15,7 +15,7 @@ function Tables.rows(X::AbstractMultiDataset)
 end
 
 function Tables.subset(X::AbstractMultiDataset, inds; viewhint = nothing)
-    slicedataset(X, inds; return_view = (isnothing(viewhint) || viewhint == true))
+    SoleBase.slicedataset(X, inds; return_view = (isnothing(viewhint) || viewhint == true))
 end
 
 function _columntruenames(row::Tuple{AbstractMultiDataset,Integer})

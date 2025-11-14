@@ -95,31 +95,6 @@ instance_channelsize(instance::AbstractArray) = size(instance)[1:end-1]
 instance_nvariables(instance::AbstractArray) = size(instance, ndims(instance))
 
 ############################################################################################
-############################################################################################
-############################################################################################
-
-# import Tables: subset
-
-# function Tables.subset(X::AbstractDimensionalDataset, inds; viewhint = nothing)
-#     slicedataset(X, inds; return_view = (isnothing(viewhint) || viewhint == true))
-# end
-
-# using MLJBase
-# using MLJModelInterface
-# import MLJModelInterface: selectrows, _selectrows
-
-# # From MLJModelInferface.jl/src/data_utils.jl
-# function MLJModelInterface._selectrows(X::AbstractDimensionalDataset{T,4}, r) where {T<:Number}
-#     slicedataset(X, inds; return_view = (isnothing(viewhint) || viewhint == true))
-# end
-# function MLJModelInterface._selectrows(X::AbstractDimensionalDataset{T,5}, r) where {T<:Number}
-#     slicedataset(X, inds; return_view = (isnothing(viewhint) || viewhint == true))
-# end
-# function MLJModelInterface.selectrows(::MLJBase.FI, ::Val{:table}, X::AbstractDimensionalDataset, r)
-#     r = r isa Integer ? (r:r) : r
-#     return Tables.subset(X, r)
-# end
-
 
 function _check_dataframe(df::AbstractDataFrame)
     coltypes = eltype.(eachcol(df))

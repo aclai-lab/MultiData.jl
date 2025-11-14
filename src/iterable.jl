@@ -58,7 +58,7 @@ function getindex(
     ::Colon
 )
     i = vec(collect(i))
-    return slicedataset(md, i; return_view = false)
+    return SoleBase.slicedataset(md, i; return_view = false)
 end
 
 function getindex(

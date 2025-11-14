@@ -33,14 +33,14 @@ original_md = deepcopy(md)
 
 @test ninstances(md) == length(eachinstance(md)) == 3
 
-@test_throws ErrorException slicedataset(md, [])
-@test_nowarn slicedataset(md, :)
-@test_nowarn slicedataset(md, 1)
-@test_nowarn slicedataset(md, [1])
+@test_throws ErrorException SoleBase.slicedataset(md, [])
+@test_nowarn SoleBase.slicedataset(md, :)
+@test_nowarn SoleBase.slicedataset(md, 1)
+@test_nowarn SoleBase.slicedataset(md, [1])
 
-@test ninstances(slicedataset(md, :)) == 3
-@test ninstances(slicedataset(md, 1)) == 1
-@test ninstances(slicedataset(md, [1])) == 1
+@test ninstances(SoleBase.slicedataset(md, :)) == 3
+@test ninstances(SoleBase.slicedataset(md, 1)) == 1
+@test ninstances(SoleBase.slicedataset(md, [1])) == 1
 
 @test_nowarn concatdatasets(md, md, md)
 @test_nowarn vcat(md, md, md)
