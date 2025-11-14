@@ -5,7 +5,6 @@ using StatsBase
 using ScientificTypes
 using DataStructures
 using Statistics
-# using Catch22
 using CSV
 using Random
 using Reexport
@@ -21,7 +20,6 @@ import Base: ==, ≈
 import Base: in, issubset, setdiff, setdiff!, union, union!, intersect, intersect!
 import Base: ∈, ⊆, ∪, ∩
 
-# import DataFrames: describe
 import ScientificTypes: show
 
 import SoleBase: instances, ninstances, concatdatasets
@@ -62,8 +60,6 @@ export insertmodality!, dropmodalities!
 # labels manipulation
 export nlabelingvariables, label, labels, labeldomain, setaslabeling!, unsetaslabeling!, joinlabels!
 
-# re-export from DataFrames
-# export describe
 # re-export from ScientificTypes
 export schema
 
@@ -73,7 +69,6 @@ const DF = DataFrames
 
 # -------------------------------------------------------------
 # Abstract types
-
 
 """
 Abstract supertype for all multimodal datasets.
@@ -167,7 +162,6 @@ Base.summary(amd::AbstractMultiDataset) = string(length(amd), "-modality ", type
 Base.summary(io::IO, amd::AbstractMultiDataset) = print(stdout, summary(amd))
 
 include("utils.jl")
-# include("describe.jl")
 include("iterable.jl")
 include("comparison.jl")
 include("set.jl")

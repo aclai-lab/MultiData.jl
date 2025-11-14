@@ -3,11 +3,6 @@ using Documenter
 
 DocMeta.setdocmeta!(MultiData, :DocTestSetup, :(using MultiData); recursive=true)
 
-
-
-
-
-
 makedocs(;
     modules=[MultiData],
     authors="Lorenzo Balboni, Federico Manzella, Giovanni Pagliarini, Eduard I. Stan",
@@ -23,7 +18,6 @@ makedocs(;
         "Home" => "index.md",
         "Datasets" => "datasets.md",
         "Manipulation" => "manipulation.md",
-        "Description" => "description.md",
         "Utils" => "utils.md",
     ],
     # NOTE: warning
