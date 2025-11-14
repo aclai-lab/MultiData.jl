@@ -5,7 +5,7 @@ using StatsBase
 using ScientificTypes
 using DataStructures
 using Statistics
-using Catch22
+# using Catch22
 using CSV
 using Random
 using Reexport
@@ -167,7 +167,7 @@ Base.summary(amd::AbstractMultiDataset) = string(length(amd), "-modality ", type
 Base.summary(io::IO, amd::AbstractMultiDataset) = print(stdout, summary(amd))
 
 include("utils.jl")
-include("describe.jl")
+# include("describe.jl")
 include("iterable.jl")
 include("comparison.jl")
 include("set.jl")
