@@ -21,7 +21,7 @@ import Base: ==, ≈
 import Base: in, issubset, setdiff, setdiff!, union, union!, intersect, intersect!
 import Base: ∈, ⊆, ∪, ∩
 
-import DataFrames: describe
+# import DataFrames: describe
 import ScientificTypes: show
 
 import SoleBase: instances, ninstances, concatdatasets
@@ -63,7 +63,7 @@ export insertmodality!, dropmodalities!
 export nlabelingvariables, label, labels, labeldomain, setaslabeling!, unsetaslabeling!, joinlabels!
 
 # re-export from DataFrames
-export describe
+# export describe
 # re-export from ScientificTypes
 export schema
 
